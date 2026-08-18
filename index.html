@@ -1,279 +1,716 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CoreEdge</title>
+
+<title>CoreEdge | Technology & E-commerce Solutions</title>
+
+<meta name="description"
+      content="CoreEdge helps businesses solve technology and e-commerce challenges through specialized expertise, practical solutions, and reliable execution.">
+
 <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+
 <style>
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin:0;
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background:#0b0f19;
-  color:white;
+  background: #0b0f19;
+  color: white;
+  line-height: 1.6;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
+
 header {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 60px; /* reduced from 70 */
-  position:fixed;
-  width:100%;
-  box-sizing:border-box; /* IMPORTANT FIX */
-  background:rgba(0,0,0,0.7);
-  z-index:1000;
-}
-
-.logo img {
-  height:60px;
-  filter: drop-shadow(0 0 6px #22c55e);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .logo {
-  display:flex;
-  align-items:center;
-  gap:18px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  height: 52px;
+  filter: drop-shadow(0 0 6px #22c55e);
 }
 
 .brand-name {
-  font-size:32px;
-  font-weight:700;
+  font-size: 30px;
+  font-weight: 700;
   background: linear-gradient(90deg, #22c55e, #4ade80);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 nav a {
-  margin:0 12px;
-  color:white;
-  text-decoration:none;
+  margin: 0 10px;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #22c55e;
 }
 
 .cta {
-  background:#22c55e;
-  padding:10px 18px;
-  border-radius:8px;
-  color:black;
-  margin-left:10px; /* spacing fix */
+  background: #22c55e;
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: #020617 !important;
+  font-weight: 600;
+  margin-left: 10px;
 }
 
-/* HERO */
+.cta:hover {
+  background: #4ade80;
+  color: #020617 !important;
+}
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:150px 80px 80px;
-  padding-top:120px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 150px 80px 80px;
+  max-width: 1500px;
+  margin: auto;
 }
 
-.hero-left { max-width:50%; }
+.hero-left {
+  max-width: 650px;
+}
 
-.hero h1 { font-size:60px; }
-.hero p { font-size:24px; color:#94a3b8; }
+.eyebrow {
+  display: inline-block;
+  color: #22c55e;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
 
-.highlight { color:#22c55e; }
+.hero h1 {
+  font-size: 62px;
+  line-height: 1.08;
+  margin: 0 0 25px;
+  letter-spacing: -2px;
+}
 
-/* GLOBE */
+.highlight {
+  color: #22c55e;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #94a3b8;
+  max-width: 620px;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-block;
+  padding: 13px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: #22c55e;
+  color: #020617;
+}
+
+.primary-btn:hover {
+  background: #4ade80;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  border: 1px solid #334155;
+  color: white;
+}
+
+.secondary-btn:hover {
+  border-color: #22c55e;
+  color: #22c55e;
+}
+
+/* =========================
+   GLOBE
+========================= */
+
 .hero-right {
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 430px;
 }
 
 .globe {
-  width:400px;
-  height:400px;
-  border-radius:50%;
-  border:2px solid #22c55e;
-  position:relative;
-  animation: spin 12s linear infinite;
-  margin-bottom:20px;
+  width: 390px;
+  height: 390px;
+  border-radius: 50%;
+  border: 2px solid #22c55e;
+  position: relative;
+  animation: spin 16s linear infinite;
+  margin-bottom: 25px;
+  box-shadow:
+    0 0 25px rgba(34,197,94,0.15),
+    inset 0 0 25px rgba(34,197,94,0.08);
 }
 
 .ring {
-  position:absolute;
-  width:100%;
-  height:100%;
-  border:1px solid #22c55e;
-  border-radius:50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #22c55e;
+  border-radius: 50%;
+  opacity: 0.7;
 }
 
-.ring:nth-child(1){ transform:rotateX(60deg); }
-.ring:nth-child(2){ transform:rotateY(60deg); }
-.ring:nth-child(3){ transform:rotateZ(60deg); }
+.ring:nth-child(1) {
+  transform: rotateX(60deg);
+}
+
+.ring:nth-child(2) {
+  transform: rotateY(60deg);
+}
+
+.ring:nth-child(3) {
+  transform: rotateZ(60deg);
+}
 
 .dot {
-  width:8px;
-  height:8px;
-  background:#22c55e;
-  border-radius:50%;
-  position:absolute;
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 12px #22c55e;
 }
 
-.dot1 { top:10%; left:50%; animation: orbit1 6s linear infinite; }
-.dot2 { top:50%; left:10%; animation: orbit2 8s linear infinite; }
-.dot3 { top:80%; left:60%; animation: orbit3 10s linear infinite; }
+.dot1 {
+  top: 10%;
+  left: 50%;
+  animation: orbit1 6s linear infinite;
+}
+
+.dot2 {
+  top: 50%;
+  left: 10%;
+  animation: orbit2 8s linear infinite;
+}
+
+.dot3 {
+  top: 80%;
+  left: 60%;
+  animation: orbit3 10s linear infinite;
+}
 
 @keyframes orbit1 {
-  0% { transform: rotate(0deg) translateX(80px); }
-  100% { transform: rotate(360deg) translateX(80px); }
+  0% {
+    transform: rotate(0deg) translateX(80px);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(80px);
+  }
 }
+
 @keyframes orbit2 {
-  0% { transform: rotate(0deg) translateX(90px); }
-  100% { transform: rotate(360deg) translateX(90px); }
+  0% {
+    transform: rotate(0deg) translateX(90px);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(90px);
+  }
 }
+
 @keyframes orbit3 {
-  0% { transform: rotate(0deg) translateX(100px); }
-  100% { transform: rotate(360deg) translateX(100px); }
+  0% {
+    transform: rotate(0deg) translateX(100px);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(100px);
+  }
 }
 
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/* STATS */
-.stats {
-  display:flex;
-  gap:12px;
-}
+/* =========================
+   INTRO
+========================= */
 
-.stat {
-  background:#111827;
-  padding:18px;
-  border-radius:8px;
-  font-size:19px;
-  transition:0.3s;
-}
-.stat:hover { box-shadow:0 0 15px #22c55e; }
-
-/* SECTION */
 .section {
-  padding:100px 60px;
-  text-align:center;
+  padding: 100px 60px;
+  text-align: center;
 }
 
-/* SERVICES */
-.cards {
-  display:flex;
-  flex-wrap:wrap;
-  gap:20px;
-  justify-content:center;
+.section-inner {
+  max-width: 1150px;
+  margin: auto;
 }
 
-.card {
-  width:260px;
-  padding:25px;
-  background:#111827;
-  border-radius:12px;
-  font-size:18px;
-  transition:0.3s;
-}
-.card:hover {
-  transform:translateY(-10px);
-  box-shadow:0 0 20px #22c55e;
+.section-label {
+  color: #22c55e;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-/* HOW IT WORKS */
+.section h2 {
+  font-size: 42px;
+  margin: 0 0 18px;
+}
+
+.section-intro {
+  max-width: 750px;
+  margin: 0 auto 50px;
+  color: #94a3b8;
+  font-size: 18px;
+}
+
+/* =========================
+   SOLUTION CARDS
+========================= */
+
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 1150px;
+  margin: auto;
+  text-align: left;
+}
+
+.solution-card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 38px;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.solution-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  background: #22c55e;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.3s;
+}
+
+.solution-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(34,197,94,0.45);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.solution-card:hover::before {
+  transform: scaleX(1);
+}
+
+.solution-number {
+  color: #22c55e;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.solution-card h3 {
+  font-size: 28px;
+  margin: 10px 0 12px;
+}
+
+.solution-card > p {
+  color: #94a3b8;
+  margin-bottom: 25px;
+}
+
+.capability-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.capability {
+  background: #0b0f19;
+  border-radius: 7px;
+  padding: 10px 12px;
+  color: #d1d5db;
+  font-size: 14px;
+}
+
+/* =========================
+   TECHNOLOGY
+========================= */
+
+.dark-section {
+  background: #080c15;
+}
+
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.capability-card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  padding: 28px 22px;
+  border-radius: 12px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.capability-card:hover {
+  border-color: #22c55e;
+  transform: translateY(-5px);
+}
+
+.capability-card h3 {
+  font-size: 19px;
+  margin: 0 0 10px;
+}
+
+.capability-card p {
+  color: #94a3b8;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* =========================
+   APPROACH
+========================= */
+
 .steps {
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .step-box {
-  width:70%;
-  background:#111827;
-  padding:25px;
-  margin:10px 0;
-  border-radius:12px;
-  font-size:18px;
-  opacity:0;
-  transform:translateY(20px);
-  transition:0.5s;
+  background: #111827;
+  border: 1px solid #1f2937;
+  padding: 28px 20px;
+  border-radius: 12px;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s;
 }
 
 .step-box:hover {
-  box-shadow:0 0 20px #22c55e;
+  border-color: #22c55e;
+  transform: translateY(-5px);
 }
 
-.arrow {
-  font-size:30px;
-  color:#22c55e;
-  opacity:0;
-  transition:0.5s;
+.step-number {
+  color: #22c55e;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.step-box h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.step-box p {
+  color: #94a3b8;
+  font-size: 14px;
 }
 
 .show {
-  opacity:1 !important;
-  transform:translateY(0) !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
-/* FORM */
-input, textarea {
-  width:320px;
-  padding:12px;
-  margin:5px;
-  border:none;
-  border-radius:6px;
+/* =========================
+   WHY COREEDGE
+========================= */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.why-card {
+  background: #111827;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: left;
+  border: 1px solid #1f2937;
+}
+
+.why-card h3 {
+  margin-top: 0;
+}
+
+.why-card p {
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-box {
+  max-width: 900px;
+  margin: auto;
+  background: #111827;
+  padding: 45px;
+  border-radius: 16px;
+  border: 1px solid #1f2937;
+}
+
+.about-box p {
+  color: #cbd5e1;
+  font-size: 17px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+  background: #080c15;
+}
+
+.contact-box {
+  max-width: 850px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  max-width: 650px;
+  padding: 14px;
+  margin: 7px 0;
+  border: 1px solid #1f2937;
+  border-radius: 7px;
+  background: #111827;
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #22c55e;
+}
+
+select option {
+  background: #111827;
 }
 
 button {
-  padding:12px 25px;
-  background:#22c55e;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
+  margin-top: 12px;
+  padding: 13px 30px;
+  background: #22c55e;
+  color: #020617;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  transition: 0.3s;
 }
 
-/* FOOTER */
+button:hover {
+  background: #4ade80;
+  transform: translateY(-2px);
+}
+
+#success-msg {
+  display: none;
+  color: #22c55e;
+  font-size: 17px;
+  margin-top: 15px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
-  background:#020617;
-  padding:50px;
-  display:flex;
-  justify-content:space-around;
-  flex-wrap:wrap;
+  background: #020617;
+  padding: 55px 60px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
 }
+
+.footer-logo {
+  height: 42px;
+}
+
+footer h4 {
+  margin-top: 0;
+}
+
+footer p,
 footer a {
-  color:#94a3b8;
-  text-decoration:none;
+  color: #94a3b8;
 }
-footer a:hover { color:#22c55e; }
-/* MOBILE FIX */
-/* ================= MOBILE RESPONSIVE FIX ================= */
+
+footer a {
+  text-decoration: none;
+  display: block;
+  margin: 8px 0;
+}
+
+footer a:hover {
+  color: #22c55e;
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+  border-top: 1px solid #1f2937;
+  padding-top: 20px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .hero {
+    padding: 130px 40px 70px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero-right {
+    min-width: 350px;
+  }
+
+  .globe {
+    width: 320px;
+    height: 320px;
+  }
+
+  .capability-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
 
-  /* ===== HEADER ===== */
   header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 10px 12px;
-    gap: 8px;
   }
 
   .logo {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-shrink: 0;
+    gap: 7px;
   }
 
   .logo img {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
   }
 
-  .logo h1 {
-    font-size: 18px;
-    margin: 0;
+  .brand-name {
+    font-size: 19px;
   }
 
   nav {
-    display: flex;
-    gap: 8px;
+    gap: 3px;
     overflow-x: auto;
     scrollbar-width: none;
   }
@@ -283,221 +720,1012 @@ footer a:hover { color:#22c55e; }
   }
 
   nav a {
-    font-size: 12px;
+    font-size: 11px;
+    margin: 0 5px;
     white-space: nowrap;
   }
 
-  .cta-button {
-    font-size: 12px;
-    padding: 6px 10px;
-    white-space: nowrap;
+  nav .cta {
+    padding: 7px 9px;
+    margin-left: 3px;
   }
 
-  /* ===== HERO SECTION ===== */
   .hero {
-    display: flex;
+    min-height: auto;
     flex-direction: column;
-    padding: 120px 20px 40px;
-    text-align: left;
-    overflow: hidden;
+    align-items: flex-start;
+    padding: 120px 20px 60px;
+    gap: 40px;
+  }
+
+  .hero-left {
+    max-width: 100%;
   }
 
   .hero h1 {
-    font-size: 34px;
-    line-height: 1.3;
-    margin-bottom: 15px;
+    font-size: 38px;
+    letter-spacing: -1px;
   }
 
   .hero p {
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 16px;
   }
 
-  .hero img,
-  .hero .globe {
+  .hero-right {
+    min-width: 0;
     width: 100%;
-    margin-top: 30px;
-    opacity: 0.8;
   }
+
+  .globe {
+    width: 280px;
+    height: 280px;
+  }
+
+  .section {
+    padding: 70px 20px;
+  }
+
+  .section h2 {
+    font-size: 32px;
+  }
+
+  .section-intro {
+    font-size: 16px;
+  }
+
+  .solution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-list {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-card {
+    padding: 28px;
+  }
+
+  .about-box {
+    padding: 28px 22px;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    padding: 40px 25px;
+  }
+
+  .footer-bottom {
+    grid-column: auto;
+  }
+
 }
+
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">
-  <img src="logo.png">
-  <span class="brand-name">CoreEdge</span>
-</div>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#services">Services</a>
-    <a href="#how">How It Works</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a class="cta" href="#contact">Hire Talent</a>
-  </nav>
-</header>
+<!-- =========================
+     HEADER
+========================= -->
 
-<section class="hero">
-  <div class="hero-left">
-    <h1>
-      Hire Top Talent in India and 
-      <span class="highlight">reduce your expenses by up to 60%</span>
-    </h1>
-    <p>
-      Build your offshore team with vetted professionals while we handle hiring, payroll, and compliance.
-    </p>
+<header>
+
+  <div class="logo">
+    <img src="logo.png" alt="CoreEdge Logo">
+    <span class="brand-name">CoreEdge</span>
   </div>
 
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#technology">Technology</a>
+    <a href="#ecommerce">E-commerce</a>
+    <a href="#how">How We Work</a>
+    <a href="#about">About</a>
+    <a class="cta" href="#contact">Start a Conversation</a>
+  </nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section id="home" class="hero">
+
+  <div class="hero-left">
+
+    <span class="eyebrow">
+      Technology & E-commerce Solutions
+    </span>
+
+    <h1>
+      Solve Complex Business Challenges with
+      <span class="highlight">the Right Expertise.</span>
+    </h1>
+
+    <p>
+      CoreEdge helps businesses solve technology and e-commerce
+      challenges through specialized expertise, practical solutions,
+      and reliable execution.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a class="primary-btn" href="#technology">
+        Explore Technology
+      </a>
+
+      <a class="secondary-btn" href="#ecommerce">
+        Explore E-commerce
+      </a>
+
+    </div>
+
+  </div>
+
+
   <div class="hero-right">
+
     <div class="globe">
+
       <div class="ring"></div>
       <div class="ring"></div>
       <div class="ring"></div>
+
       <div class="dot dot1"></div>
       <div class="dot dot2"></div>
       <div class="dot dot3"></div>
+
     </div>
-    <div class="stats">
-      <div class="stat">60% Cost Efficiency</div>
-      <div class="stat">3 Weeks Hiring</div>
-      <div class="stat">24/7 Support</div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="section">
+
+  <div class="section-inner">
+
+    <div class="section-label">
+      What We Do
     </div>
+
+    <h2>
+      Solutions Built Around Your Business
+    </h2>
+
+    <p class="section-intro">
+      Every business has different challenges. We bring together
+      the right capabilities, technology and expertise to address
+      the problem at hand — from development and analytics to
+      AI, automation and e-commerce operations.
+    </p>
+
+
+    <div class="solution-grid">
+
+
+      <!-- TECHNOLOGY -->
+
+      <div class="solution-card">
+
+        <span class="solution-number">
+          01 / TECHNOLOGY
+        </span>
+
+        <h3>
+          Technology Solutions
+        </h3>
+
+        <p>
+          Build, improve and scale your technology capabilities
+          with specialized expertise across software, data,
+          AI and quality engineering.
+        </p>
+
+        <div class="capability-list">
+
+          <div class="capability">
+            Software Development
+          </div>
+
+          <div class="capability">
+            Data & Analytics
+          </div>
+
+          <div class="capability">
+            AI & Automation
+          </div>
+
+          <div class="capability">
+            QA & Testing
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ECOMMERCE -->
+
+      <div class="solution-card">
+
+        <span class="solution-number">
+          02 / E-COMMERCE
+        </span>
+
+        <h3>
+          E-commerce Solutions
+        </h3>
+
+        <p>
+          Help your commerce business operate more efficiently
+          through technology, analytics, operations and
+          process automation.
+        </p>
+
+        <div class="capability-list">
+
+          <div class="capability">
+            E-commerce Technology
+          </div>
+
+          <div class="capability">
+            Store Operations
+          </div>
+
+          <div class="capability">
+            E-commerce Analytics
+          </div>
+
+          <div class="capability">
+            Automation
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
+
 </section>
 
-<section id="services" class="section">
-  <h2>Our Services</h2>
-  <div class="cards">
-    <div class="card">End-to-End Recruitment</div>
-    <div class="card">Payroll & Compliance</div>
-    <div class="card">Tech Hiring</div>
-    <div class="card">Offshore Teams</div>
-    <div class="card" style="font-size:20px;">3rd Party Payroll</div>
-    <div class="card" style="font-size:20px;">Contract Hiring</div>
+
+<!-- =========================
+     TECHNOLOGY
+========================= -->
+
+<section id="technology" class="section dark-section">
+
+  <div class="section-inner">
+
+    <div class="section-label">
+      Technology Solutions
+    </div>
+
+    <h2>
+      Technology That Moves Your Business Forward
+    </h2>
+
+    <p class="section-intro">
+      From building applications to improving data and automating
+      processes, we bring specialized technical capabilities
+      around your business requirements.
+    </p>
+
+
+    <div class="capability-grid">
+
+
+      <div class="capability-card">
+
+        <h3>
+          Software Engineering
+        </h3>
+
+        <p>
+          Web applications, backend systems, APIs, mobile
+          applications and custom software solutions.
+        </p>
+
+      </div>
+
+
+      <div class="capability-card">
+
+        <h3>
+          Data & Analytics
+        </h3>
+
+        <p>
+          Data analysis, reporting, dashboards, business
+          intelligence and data-driven decision support.
+        </p>
+
+      </div>
+
+
+      <div class="capability-card">
+
+        <h3>
+          AI & Automation
+        </h3>
+
+        <p>
+          AI integrations, intelligent workflows, automation,
+          AI agents and process optimization.
+        </p>
+
+      </div>
+
+
+      <div class="capability-card">
+
+        <h3>
+          Quality Engineering
+        </h3>
+
+        <p>
+          Manual testing, automation testing, quality assurance
+          and software validation.
+        </p>
+
+      </div>
+
+
+    </div>
+
   </div>
+
 </section>
 
-<section id="how" class="section">
-  <h2>How It Works</h2>
-  <div class="steps">
-    <div class="step-box">1. Define Your Needs: We deeply understand your requirements.</div>
-    <div class="arrow">↓</div>
 
-    <div class="step-box">2. Rigorous Vetting: Multi-stage screening ensures only top candidates reach you.</div>
-    <div class="arrow">↓</div>
+<!-- =========================
+     E-COMMERCE
+========================= -->
 
-    <div class="step-box">3. Your Final Say: You interview and make the final decision.</div>
-    <div class="arrow">↓</div>
+<section id="ecommerce" class="section">
 
-    <div class="step-box">4. Seamless Onboarding: We handle setup, tools, and infrastructure.</div>
-    <div class="arrow">↓</div>
+  <div class="section-inner">
 
-    <div class="step-box">5. Exclusive Dedication: Your team works only for you.</div>
-    <div class="arrow">↓</div>
+    <div class="section-label">
+      E-commerce Solutions
+    </div>
 
-    <div class="step-box">6. Full-Stack Support: We manage HR, payroll, and compliance.</div>
+    <h2>
+      Better Technology. Better Commerce.
+    </h2>
+
+    <p class="section-intro">
+      We help e-commerce businesses improve how they build,
+      operate, analyze and automate their commerce ecosystem.
+    </p>
+
+
+    <div class="capability-grid">
+
+
+      <div class="capability-card">
+
+        <h3>
+          E-commerce Technology
+        </h3>
+
+        <p>
+          Shopify, WooCommerce, marketplace integrations,
+          store customization and supporting technology.
+        </p>
+
+      </div>
+
+
+      <div class="capability-card">
+
+        <h3>
+          Store Operations
+        </h3>
+
+        <p>
+          Product catalog management, order processes,
+          inventory workflows and day-to-day operations.
+        </p>
+
+      </div>
+
+
+      <div class="capability-card">
+
+        <h3>
+          E-commerce Analytics
+        </h3>
+
+        <p>
+          Sales reporting, customer insights, inventory
+          analysis and performance dashboards.
+        </p>
+
+      </div>
+
+
+      <div class="capability-card">
+
+        <h3>
+          Process Automation
+        </h3>
+
+        <p>
+          Automate repetitive commerce workflows, reporting,
+          customer processes and operational tasks.
+        </p>
+
+      </div>
+
+
+    </div>
+
   </div>
+
 </section>
 
-<section id="about" class="section">
-  <h2>About Us</h2>
-  <h3>Global Talent, Local Compliance.</h3>
-  <p style="max-width:800px; margin:auto;">
-We bridge the gap between world-class companies and India’s premier talent pool. Our mission is to simplify global expansion by handling the heavy lifting of human resources. Whether you are an Indian firm looking for reliable 3rd party payroll or an international business seeking a full-scale offshore team, we provide the infrastructure and expertise to make it happen. We don't just find employees; we build the foundation for your success.
-  </p>
+
+<!-- =========================
+     HOW WE WORK
+========================= -->
+
+<section id="how" class="section dark-section">
+
+  <div class="section-inner">
+
+    <div class="section-label">
+      Our Approach
+    </div>
+
+    <h2>
+      How We Work
+    </h2>
+
+    <p class="section-intro">
+      We focus on understanding the problem first, then bringing
+      together the right expertise to deliver a practical solution.
+    </p>
+
+
+    <div class="steps">
+
+
+      <div class="step-box">
+
+        <span class="step-number">
+          01
+        </span>
+
+        <h3>
+          Understand
+        </h3>
+
+        <p>
+          We understand your business challenge, objectives
+          and requirements.
+        </p>
+
+      </div>
+
+
+      <div class="step-box">
+
+        <span class="step-number">
+          02
+        </span>
+
+        <h3>
+          Define
+        </h3>
+
+        <p>
+          We identify the right approach, capabilities and
+          expertise required.
+        </p>
+
+      </div>
+
+
+      <div class="step-box">
+
+        <span class="step-number">
+          03
+        </span>
+
+        <h3>
+          Build
+        </h3>
+
+        <p>
+          The right specialists work on the solution around
+          your requirements.
+        </p>
+
+      </div>
+
+
+      <div class="step-box">
+
+        <span class="step-number">
+          04
+        </span>
+
+        <h3>
+          Deliver
+        </h3>
+
+        <p>
+          We focus on reliable execution and practical
+          business outcomes.
+        </p>
+
+      </div>
+
+
+      <div class="step-box">
+
+        <span class="step-number">
+          05
+        </span>
+
+        <h3>
+          Improve
+        </h3>
+
+        <p>
+          We refine and scale the solution as your business
+          needs evolve.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
 </section>
 
-<section id="contact" class="section">
-  <h2>Contact Us</h2>
-  <form action="https://formspree.io/f/xpqbdlrw" method="POST">
 
-  <input type="text" name="name" placeholder="Name*" required><br>
+<!-- =========================
+     WHY COREDGE
+========================= -->
 
-  <input type="email" name="email" placeholder="Email*" required><br>
+<section class="section">
 
-  <input type="tel" name="phone" placeholder="Contact Number"><br>
+  <div class="section-inner">
 
-  <input type="text" name="company" placeholder="Company Name"><br>
+    <div class="section-label">
+      Why CoreEdge
+    </div>
 
-  <textarea name="roles" placeholder="What roles are you looking to hire?"></textarea><br>
+    <h2>
+      Practical Expertise. Focused Execution.
+    </h2>
 
-  <button type="submit">Submit</button>
+    <p class="section-intro">
+      We keep our approach straightforward: understand the
+      requirement, bring the right expertise and stay focused
+      on getting the work done.
+    </p>
 
-</form>
-<p id="success-msg" style="display:none; color:#22c55e; font-size:18px; margin-top:10px;">
-  ✅ Thanks! We'll contact you shortly.
-</p>
+
+    <div class="why-grid">
+
+
+      <div class="why-card">
+
+        <h3>
+          Business-First Thinking
+        </h3>
+
+        <p>
+          We start with the business problem rather than
+          forcing a predefined technology or service.
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <h3>
+          Specialized Expertise
+        </h3>
+
+        <p>
+          We bring together the technical and operational
+          capabilities required for each engagement.
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <h3>
+          Flexible Engagement
+        </h3>
+
+        <p>
+          Our approach can adapt to different project sizes,
+          requirements and ongoing business needs.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
 </section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about" class="section dark-section">
+
+  <div class="section-inner">
+
+    <div class="section-label">
+      About CoreEdge
+    </div>
+
+    <h2>
+      Built to Solve, Not Just Supply.
+    </h2>
+
+
+    <div class="about-box">
+
+      <p>
+        CoreEdge is a technology and e-commerce solutions
+        company focused on helping businesses solve operational
+        and technology challenges through specialized expertise
+        and execution.
+      </p>
+
+      <p>
+        We bring together the right technical and business
+        capabilities for each engagement — from software
+        development and data analytics to AI, automation and
+        e-commerce operations.
+      </p>
+
+      <p>
+        Our approach is simple: understand the problem, build
+        the right solution, and stay focused on delivering
+        meaningful business outcomes.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="section contact-section">
+
+  <div class="section-inner contact-box">
+
+    <div class="section-label">
+      Let's Talk
+    </div>
+
+    <h2>
+      Have a Business Challenge?
+    </h2>
+
+    <p class="section-intro">
+      Tell us what you're trying to solve. We'll understand
+      the requirement and explore how CoreEdge can help.
+    </p>
+
+
+    <form
+      action="https://formspree.io/f/xpqbdlrw"
+      method="POST"
+    >
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name *"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Work Email *"
+        required
+      >
+
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Contact Number"
+      >
+
+      <input
+        type="text"
+        name="company"
+        placeholder="Company Name"
+      >
+
+
+      <select name="area">
+
+        <option value="">
+          What can we help you with?
+        </option>
+
+        <option value="Technology Solution">
+          Technology Solution
+        </option>
+
+        <option value="Software Development">
+          Software Development
+        </option>
+
+        <option value="Data & Analytics">
+          Data & Analytics
+        </option>
+
+        <option value="AI & Automation">
+          AI & Automation
+        </option>
+
+        <option value="QA & Testing">
+          QA & Testing
+        </option>
+
+        <option value="E-commerce Solution">
+          E-commerce Solution
+        </option>
+
+        <option value="Shopify">
+          Shopify
+        </option>
+
+        <option value="Amazon / Marketplace">
+          Amazon / Marketplace
+        </option>
+
+        <option value="E-commerce Operations">
+          E-commerce Operations
+        </option>
+
+        <option value="Other">
+          Other
+        </option>
+
+      </select>
+
+
+      <textarea
+        name="requirement"
+        placeholder="Tell us about your requirement..."
+      ></textarea>
+
+
+      <button type="submit">
+        Start a Conversation
+      </button>
+
+
+    </form>
+
+
+    <p id="success-msg">
+      Thanks! We've received your enquiry and will get back to you shortly.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-  <div>
-    <img src="logo.png" style="height:40px;"><br><br>
-    <p>We build global teams and simplify hiring across borders.</p>
-  </div>
 
   <div>
-    <h4>Quick Links</h4>
-    <a href="#services">Services |</a>
-    <a href="#how">How It Works |</a>
-    <a href="#">Privacy Policy</a>
+
+    <img
+      src="logo.png"
+      class="footer-logo"
+      alt="CoreEdge"
+    >
+
+    <p>
+      Technology & E-commerce Solutions
+    </p>
+
+    <p>
+      Practical expertise. Focused execution.
+    </p>
+
   </div>
 
-  <div>
-    <h4>Contact</h4>
-    <p>hr@coreedge.in</p>
-    <p>vishal@coreedge.in</p>
-    <p>ananya@coreedge.in</p>
-    <p>rajeev@coreedge.in</p>
-  </div>
 
   <div>
-    <h4>Social</h4>
-    <a href="#">LinkedIn</a>
+
+    <h4>
+      Solutions
+    </h4>
+
+    <a href="#technology">
+      Technology
+    </a>
+
+    <a href="#ecommerce">
+      E-commerce
+    </a>
+
+    <a href="#how">
+      How We Work
+    </a>
+
+    <a href="#about">
+      About
+    </a>
+
   </div>
+
+
+  <div>
+
+    <h4>
+      Contact
+    </h4>
+
+    <p>
+      hr@coreedge.in
+    </p>
+
+    <p>
+      vishal@coreedge.in
+    </p>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    © 2026 CoreEdge. All rights reserved.
+
+  </div>
+
 </footer>
 
-<script>
-const steps = document.querySelectorAll('.step-box');
-const arrows = document.querySelectorAll('.arrow');
 
-window.addEventListener('scroll', () => {
-  steps.forEach((step, i) => {
-    if(step.getBoundingClientRect().top < window.innerHeight - 50){
-      setTimeout(() => {
-        step.classList.add('show');
-        if(arrows[i]) arrows[i].classList.add('show');
-      }, i * 200);
-    }
-  });
-});
-</script>
+<!-- =========================
+     SCRIPTS
+========================= -->
+
 <script>
+
+/* =========================
+   STEP ANIMATION
+========================= */
+
+const steps = document.querySelectorAll('.step-box');
+
+function revealSteps() {
+
+  steps.forEach((step, index) => {
+
+    const position =
+      step.getBoundingClientRect().top;
+
+    if (position < window.innerHeight - 80) {
+
+      setTimeout(() => {
+
+        step.classList.add('show');
+
+      }, index * 150);
+
+    }
+
+  });
+
+}
+
+window.addEventListener('scroll', revealSteps);
+
+window.addEventListener('load', revealSteps);
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
 const form = document.querySelector("form");
-const successMsg = document.getElementById("success-msg");
+
+const successMsg =
+  document.getElementById("success-msg");
+
 
 form.addEventListener("submit", async function(e) {
+
   e.preventDefault();
 
   const data = new FormData(form);
 
-  const response = await fetch(form.action, {
-    method: form.method,
-    body: data,
-    headers: {
-      'Accept': 'application/json'
-    }
-  });
+  try {
 
-  if (response.ok) {
-    form.reset();
-    successMsg.style.display = "block";
-  } else {
-    alert("Something went wrong. Please try again.");
+    const response = await fetch(
+      form.action,
+      {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }
+    );
+
+    if (response.ok) {
+
+      form.reset();
+
+      successMsg.style.display = "block";
+
+    } else {
+
+      alert(
+        "Something went wrong. Please try again."
+      );
+
+    }
+
+  } catch (error) {
+
+    alert(
+      "Something went wrong. Please try again."
+    );
+
   }
+
 });
+
 </script>
+
 </body>
 </html>
